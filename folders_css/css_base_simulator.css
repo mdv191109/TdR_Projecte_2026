@@ -1,0 +1,22 @@
+@font-face {
+  font-family: base;
+  src: url(../folders_fonts/Basenji-SemiBold.otf);
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: base;
+
+}
+
+body {
+  margin: 0px;
+  height: 100dvh;
+  width: 100dvw;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+body {
+    background-color: rgb(255, 255, 255);
+}
