@@ -1,0 +1,67 @@
+@font-face {
+  font-family: base;
+  src: url(../folders_fonts/Basenji-SemiBold.otf);
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: base;
+
+}
+
+body {
+  margin: 0px;
+  height: 100dvh;
+  width: 100dvw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div#main_content {
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  align-items: center;
+}
+
+div#top {
+  font-size: 20px;
+}
+
+div#middle,
+div#bottom {
+  font-size: 80px;
+  justify-self: center;
+}
+
+div#middle {
+  padding-top: 5%;
+}
+
+div#bottom {
+  padding-bottom: 5%;
+}
+
+button {
+  font-size: 40px;
+}
+
+@media (max-width: 1100px) {
+  div#middle,
+  div#bottom {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 600px) {
+  * {
+    margin: 0px;
+    padding-inline: 0px;
+    padding: 0px;
+  }
+  div#main_content {
+    min-width: 100dvw;
+    scale: 0.8;
+  }
+}
