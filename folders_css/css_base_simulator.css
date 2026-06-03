@@ -274,3 +274,26 @@ img:hover {
 #main_text * {
   font-size: inherit;
 }
+
+
+
+#loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  background: linear-gradient(120deg, #070a1f, #0b1b3a);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+/* hidden state */
+#loader.hide {
+  opacity: 0;
+  pointer-events: none;
+}
