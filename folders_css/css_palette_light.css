@@ -39,8 +39,7 @@
      PRIMARY BLUE SYSTEM
   ========================= */
 
- /* --primary: #38bdf8;*/
-   --primary: #d080f0;
+  --primary: #38bdf8;
   --primary-dark: #0ea5e9;
 
   --primary-hover-gradient: linear-gradient(
