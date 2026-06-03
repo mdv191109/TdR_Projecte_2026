@@ -226,4 +226,9 @@ const main = document.getElementById("main_text");
 
 slider.addEventListener("input", function () {
   main.style.fontSize = this.value + "px";
+
+document.querySelectorAll('p, span, h2').forEach(el => {
+    el.style.fontSize = this.value + 'px';
+});
+
 });
