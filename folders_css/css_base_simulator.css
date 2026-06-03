@@ -1,95 +1,276 @@
+
+
 @font-face {
-  font-family: base;
-  src: url(../folders_fonts/Basenji-SemiBold.otf);
+  font-family: bold_font;
+  src: url(../folders_fonts/black.otf);
+}@font-face {
+  font-family:medium_font;
+  src: url(../folders_fonts/medium.otf);
+}@font-face {
+   font-family:thin_font;
+  src: url(../folders_fonts/thin.otf);
 }
 
 * {
   margin: 0;
   padding: 0;
-  font-family: base;
   box-sizing: border-box;
+  font-family: medium_font;
 }
+
+#main_text,
+#main_text * {
+  font-size: inherit;
+}
+
+/* =========================
+   BODY (ANIMATED GRADIENT)
+========================= */
 
 body {
-  margin: 0 auto;
   width: 100%;
   max-width: 1000px;
+  margin: 0 auto;
+
+  padding: 40px 20px;
 
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
+  gap: 16px;
 
-  padding-top: 50px;
-  padding-bottom: 50px;
+  color: var(--text);
 
-  background-color: var(--primary-highlight);
-  color: var(--black);
+  background: var(--bg-gradient);
+  background-size: var(--bg-size);
+
+  animation: bgFlow 12s ease infinite;
 }
 
+@keyframes bgFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
 h1 {
-  font-size: 32px;
-  margin-block: 70px;
-  color: var(--primary-dark);
+  font-size: 40px;
+  letter-spacing: 1px;
+  color: var(--accent);
+  font-family: bold_font;
 }
 
 h2 {
-  font-size: 26px;
-  font-weight: bold;
+  font-size: 22px;
   color: var(--primary-dark);
+  font-family: medium_font;
 }
 
 p {
-  line-height: 1.5;
+  color: var(--muted);
+  line-height: 1.6;
+  font-family: thin_font;
+  font-weight: bold;
 }
+
+/* =========================
+   CONTAINERS
+========================= */
 
 div {
-  padding-inline: 20px;
-  background-color: var(--primary-light);
-  border-radius: 10px;
+  background: var(--glass);
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+
+  backdrop-filter: var(--blur);
+
+  padding: 18px;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+margin-bottom: 24px;
 }
 
-.question {
-  padding-block: 10px;
+
+div:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
 }
 
-.question label {
-  display: block;
-  margin-top: 5px;
-}
-
-img {
-  max-width: 300px;
-  width: 100%;
-  padding: 20px;
-}
+/* =========================
+   SETTINGS BAR
+========================= */
 
 #settings {
   display: flex;
-  gap: 20px;
+  gap: 12px;
   align-items: center;
-  padding: 20px;
+  flex-wrap: wrap;
+
+  background: var(--glass-strong);
+  backdrop-filter: var(--blur-strong);
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius);
+
+  box-shadow: var(--shadow);
 }
+
+/* =========================
+   BUTTONS
+========================= */
 
 button,
 select {
-  padding: 8px 12px;
-  border: 2px solid var(--primary-dark);
-  background-color: var(--primary-base);
-  color: var(--white);
+  padding: 8px 14px;
+
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+
+  background: var(--surface-alt);
+  color: var(--text);
+
   cursor: pointer;
+
+  transition: all 0.2s ease;
 }
 
 button:hover,
 select:hover {
-  background-color: var(--primary-dark);
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
 }
+
+/* =========================
+   SLIDER
+========================= */
 
 input[type="range"] {
-  width: 150px;
+  width: 160px;
+  accent-color: var(--primary);
 }
 
+/* =========================
+   QUESTIONS
+========================= */
+
+.question {
+  padding: 14px;
+  border-radius: var(--radius-sm);
+
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+
+  backdrop-filter: var(--blur);
+}
+
+.question:hover {
+  transform: scale(1.01);
+  transition: 0.2s ease;
+}
+
+/* =========================
+   IMAGES
+========================= */
+
+img {
+  width: 100%;
+  max-width: 320px;
+
+  margin-top: 10px;
+
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+
+  box-shadow: var(--shadow-soft);
+
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.02) rotate(0.3deg);
+}
+
+/* =========================
+   RESULT BOX
+========================= */
+
 #resultat {
-  font-size: 20px;
-  font-weight: bold;
-  color: var(--secondary-dark);
+  font-size: 18px;
+  font-weight: 600;
+
+  padding: 12px;
+  border-radius: var(--radius-sm);
+
+  background: var(--accent-gradient);
+  color: var(--text);
+
+  box-shadow: var(--shadow-accent);
+
+  animation: popIn 0.4s ease;
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* =========================
+   BUTTON PRIMARY
+========================= */
+
+#res {
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+
+  background: var(--primary-hover-gradient);
+  color: white;
+
+  border: none;
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+#res:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+#res:active {
+  transform: scale(0.98);
+}
+
+
+
+.question label {
+  font-size: inherit;
+  line-height: 1.4;
+}
+
+.question input {
+  transform: scale(1);
+  margin-right: 6px;
+}
+
+
+#main_text {
+  --font-size: 18px;
+  font-size: var(--font-size);
+}
+
+#main_text,
+#main_text * {
+  font-size: inherit;
 }

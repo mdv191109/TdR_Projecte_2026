@@ -222,8 +222,8 @@ document.getElementById("themeSelector").addEventListener("change", function () 
 
 
 const slider = document.getElementById("fontSlider");
-  const text = document.getElementById("text");
+const main = document.getElementById("main_text");
 
-  slider.addEventListener("input", function () {
-document.body.style.fontSize = this.value + "px";
+slider.addEventListener("input", function () {
+  main.style.fontSize = this.value + "px";
 });
