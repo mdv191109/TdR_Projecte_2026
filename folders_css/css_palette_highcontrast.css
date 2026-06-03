@@ -1,0 +1,14 @@
+:root {
+  --primary-base: #000000;
+  --primary-light: #000000;
+  --primary-dark: #000000;
+  --primary-highlight: #000000;
+
+  --white: #ffff00;
+  --black: #000000;
+
+  --secondary-base: #ffff00;
+  --secondary-light: #ffff00;
+  --secondary-dark: #ffff00;
+  --secondary-highlight: #ffff00;
+}

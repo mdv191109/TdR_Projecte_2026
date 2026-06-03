@@ -11,10 +11,4 @@
     --secondary-light: #feffa9;
     --secondary-dark: #e18229;
     --secondary-highlight: #fffbe7;
-
-    /* something like this for the fucking page's text, so its different from the palette colour*/
-    --primary-titles: #0b4692;
-    --primary-text: #000000;
-    --secondary-text: #000000;
-    --secondary-titles: #e18229;
 }

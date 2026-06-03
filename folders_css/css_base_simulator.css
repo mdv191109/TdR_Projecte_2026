@@ -2,50 +2,94 @@
   font-family: base;
   src: url(../folders_fonts/Basenji-SemiBold.otf);
 }
+
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   font-family: base;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  background-color: var(--primary-highlight);
+  color: var(--black);
 }
 
 h1 {
   font-size: 32px;
   margin-block: 70px;
+  color: var(--primary-dark);
 }
 
 h2 {
   font-size: 26px;
   font-weight: bold;
+  color: var(--primary-dark);
 }
 
-body {
-  margin: 0;
-  height: 100%;
-  width: 100vw;
-  max-width: 1000px;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
-
+p {
+  line-height: 1.5;
 }
-
-
 
 div {
   padding-inline: 20px;
-    background-color: rgba(102, 58, 188, 0.288);
+  background-color: var(--primary-light);
+  border-radius: 10px;
 }
 
-
 .question {
-
+  padding-block: 10px;
 }
 
 .question label {
-
+  display: block;
+  margin-top: 5px;
 }
 
 img {
   max-width: 300px;
+  width: 100%;
   padding: 20px;
+}
+
+#settings {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+}
+
+button,
+select {
+  padding: 8px 12px;
+  border: 2px solid var(--primary-dark);
+  background-color: var(--primary-base);
+  color: var(--white);
+  cursor: pointer;
+}
+
+button:hover,
+select:hover {
+  background-color: var(--primary-dark);
+}
+
+input[type="range"] {
+  width: 150px;
+}
+
+#resultat {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--secondary-dark);
 }

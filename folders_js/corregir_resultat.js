@@ -11,7 +11,7 @@ const respostesCorrectes = {
   q10: "b"
 };
 
-document.getElementById("corregir").addEventListener("click", function () {
+function corregirQuiz() {
   let puntuacio = 0;
 
   for (let pregunta in respostesCorrectes) {
@@ -27,16 +27,23 @@ document.getElementById("corregir").addEventListener("click", function () {
     }
   }
 
-let missatge = "";
+  const texts = window.translations[window.currentLanguage].results;
 
-if (puntuacio === 10) {
-  missatge = "Perfecte! Has respost totes les preguntes correctament.";
-} else if (puntuacio >= 7) {
-  missatge = `Molt bé! Has obtingut ${puntuacio}/10.`;
-} else if (puntuacio >= 5) {
-  missatge = `Has obtingut ${puntuacio}/10. Repassa alguns conceptes.`;
-} else {
-  missatge = `Has obtingut ${puntuacio}/10. Et recomano tornar a llegir la teoria.`;
+  let missatge = "";
+
+  if (puntuacio === 10) {
+    missatge = texts.perfect;
+  } else if (puntuacio >= 7) {
+    missatge = `${texts.good} ${puntuacio}/10.`;
+  } else if (puntuacio >= 5) {
+    missatge = `${texts.medium} ${puntuacio}/10. ${texts.mediumEnd}`;
+  } else {
+    missatge = `${texts.low} ${puntuacio}/10. ${texts.lowEnd}`;
+  }
+
+  document.getElementById("resultat").textContent = missatge;
 }
 
-document.getElementById("resultat").textContent = missatge; })
+document
+  .getElementById("res")
+  .addEventListener("click", corregirQuiz);
