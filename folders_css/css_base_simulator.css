@@ -6,13 +6,23 @@
   margin: 0px;
   padding: 0px;
   font-family: base;
+}
 
+h1 {
+  font-size: 32px;
+  margin-block: 70px;
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: bold;
 }
 
 body {
   margin: 0;
-  height: 100dvh;
-  width: 100dvw;
+  height: 100%;
+  width: 100vw;
+  max-width: 1000px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
@@ -22,5 +32,20 @@ body {
 
 
 div {
+  padding-inline: 20px;
     background-color: rgba(102, 58, 188, 0.288);
+}
+
+
+.question {
+
+}
+
+.question label {
+
+}
+
+img {
+  max-width: 300px;
+  padding: 20px;
 }
