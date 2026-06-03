@@ -3,229 +3,327 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="folder_images/images_icon/favicon.png" />
-<link
-  id="paletteCSS"
-  rel="stylesheet"
-  href="folders_css/css_palette_light.css"
-/>
-
-
     <link
-  rel="stylesheet"
-  href="folders_css/css_base_simulator.css"
-/>
+      rel="icon"
+      type="image/png"
+      href="folder_images/images_icon/favicon.png"
+    />
+    <link
+      id="paletteCSS"
+      rel="stylesheet"
+      href="folders_css/css_palette_light.css"
+    />
+
+    <link rel="stylesheet" href="folders_css/css_base_simulator.css" />
 
     <title>simulator_page</title>
   </head>
 
-
   <body>
+    <header>
+      <div id="settings">
+        <button id="languageButton">English</button>
 
-      <header>
-    <div id="settings">
-  <button id="languageButton">English</button>
+        <select id="themeSelector">
+          <option value="default">Tema clar</option>
+          <option value="dark">Tema fosc</option>
+          <option value="highContrast">Alt contrast</option>
+        </select>
 
-  <select id="themeSelector">
-    <option value="default">Tema clar</option>
-    <option value="dark">Tema fosc</option>
-    <option value="highContrast">Alt contrast</option>
-  </select>
+        <label for="fontSlider">Mida del text:</label>
 
-  <label for="fontSlider">Mida del text:</label>
+        <input type="range" id="fontSlider" min="14" max="30" value="18" />
+      </div>
+    </header>
 
-  <input
-    type="range"
-    id="fontSlider"
-    min="14"
-    max="30"
-    value="18"
-  />
-</div>
-  </header>
+    <main>
+      <div id="header">
+        <h1 id="pageTitle">Teoria àcid-base</h1>
+      </div>
 
-    <div type="main">
-    <div id="header">
-      <h1 id="pageTitle">Teoria àcid-base</h1>
+      <div id="main_text">
+        <br />
+        <h2 id="historicTitle">context històric</h2>
+        <p id="historicText">
+          A finals del segle XIX, Svante August Arrhenius va formular la teoria
+          de la dissociació electrolítica, amb la qual podem explicar les
+          característiques de les substàncies àcides i bàsiques. Aquesta teoria
+          continua sent una de les bases per a l'estudi de les reaccions
+          àcid-base.
+        </p>
+        <img src="folder_images/images_teoria/Arrhenius.png" />
+        <br />
+        <h2 id="acidsTitle">Substàncies àcides</h2>
+        <p id="acidsText">
+          Les substàncies àcides són aquelles que, quan es dissolen en aigua,
+          alliberen ions d'hidrogen (H⁺). Generalment tenen un valor de pH
+          inferior a 7. Un exemple d'àcid és l'àcid clorhídric (HCl).
+        </p>
+        <br />
+        <h2 id="basesTitle">Substàncies bàsiques</h2>
+        <p id="basesText">
+          Les substàncies bàsiques són aquelles que, quan es dissolen en aigua,
+          alliberen ions hidroxil (OH⁻). Generalment tenen un valor de pH
+          superior a 7. Un exemple de base és l'hidròxid de sodi (NaOH).
+        </p>
+        <br />
+        <h2 id="neutralizationTitle">Procés de neutralització</h2>
+        <p id="neutralizationText">
+          Neutralitzar una substància consisteix a fer reaccionar un àcid amb
+          una base. Durant aquesta reacció, els ions H⁺ i OH⁻ s'uneixen per
+          formar aigua. El resultat final és la formació d'una sal i aigua.
+          <br />
+          Àcid + Base → Sal + Aigua
+        </p>
+        <br />
+        <h2 id="pHTitle">Escala de pH i pOH</h2>
+        <p id="pHText">
+          El pH és una escala que permet mesurar el grau d'acidesa d'una
+          substància. Els valors inferiors a 7 corresponen a substàncies àcides,
+          el valor 7 correspon a una substància neutra i els valors superiors a
+          7 corresponen a substàncies bàsiques. <br />
+          El pOH és una escala similar, però relacionada amb la concentració
+          d'ions hidroxil (OH⁻).
+        </p>
+        <img src="folder_images/images_teoria/escala.png" />
+        <br />
+        <h2 id="indicatorsTitle">Substàncies indicadores</h2>
+        <p id="indicatorsText">
+          Els indicadors de pH són substàncies que canvien de color segons
+          l'acidesa o la basicitat d'una dissolució. S'utilitzen habitualment
+          als laboratoris per determinar de forma visual el valor aproximat de
+          pH d'una substància.
+        </p>
+        <img src="folder_images/images_teoria/paper.png" />
+        <br />
+      </main>
+
+      <div id="game">
+        <br />
+        <h2 id="quizTitle">Qüestionari:</h2>
+        <br />
+        <div class="question">
+          <p id="q1text">
+            1. Una substància ____ és aquella que es dissocia en ions d'hidrogen
+            (H⁺).
+          </p>
+
+          <label
+            ><input type="radio" name="q1" value="a" />
+            <span id="q1a">Àcida</span></label
+          ><br />
+          <label
+            ><input type="radio" name="q1" value="b" />
+            <span id="q1b">Bàsica</span></label
+          ><br />
+          <label
+            ><input type="radio" name="q1" value="c" />
+            <span id="q1c">Neutra</span></label
+          ><br />
+        </div>
+
+        <br />
+
+        <div class="question">
+          <p id="q2text">
+            2. Una substància ____ és aquella que es dissocia en ions hidroxil
+            (OH⁻).
+          </p>
+
+          <label
+            ><input type="radio" name="q2" value="a" />
+            <span id="q2a">Àcida</span></label
+          ><br />
+          <label
+            ><input type="radio" name="q2" value="b" />
+            <span id="q2b">Bàsica</span></label
+          ><br />
+          <label
+            ><input type="radio" name="q2" value="c" />
+            <span id="q2c">Neutra</span></label
+          ><br />
+        </div>
+
+        <br />
+
+        <div class="question">
+          <p id="q3text">3. Quin dels següents compostos és un àcid?</p>
+
+          <label
+            ><input type="radio" name="q3" value="a" />
+            <span id="q3a">HCl</span></label
+          ><br />
+          <label
+            ><input type="radio" name="q3" value="b" />
+            <span id="q3b">NaOH</span></label
+          ><br />
+          <label
+            ><input type="radio" name="q3" value="c" />
+            <span id="q3c">NaCl</span></label
+          ><br />
+        </div>
+
+        <br />
+
+        <div class="question">
+          <p id="q4text">4. Quin dels següents compostos és una base?</p>
+
+          <label
+            ><input type="radio" name="q4" value="a" />
+            <span id="q4a">HCl</span></label
+          ><br />
+          <label
+            ><input type="radio" name="q4" value="b" />
+            <span id="q4b">NaOH</span></label
+          ><br />
+          <label
+            ><input type="radio" name="q4" value="c" />
+            <span id="q4c">H₂O</span></label
+          ><br />
+        </div>
+
+        <br />
+
+        <div class="question">
+          <p id="q5text">
+            5. Què es forma durant una reacció de neutralització?
+          </p>
+
+          <label
+            ><input type="radio" name="q5" value="a" />
+            <span id="q5a">Només aigua</span></label
+          ><br />
+          <label
+            ><input type="radio" name="q5" value="b" />
+            <span id="q5b">Només una sal</span></label
+          ><br />
+          <label
+            ><input type="radio" name="q5" value="c" />
+            <span id="q5c">Una sal i aigua</span></label
+          ><br />
+        </div>
+
+        <br />
+
+        <div class="question">
+          <p id="q6text">
+            6. Un valor de pH igual a 7 indica que la substància és:
+          </p>
+
+          <label
+            ><input type="radio" name="q6" value="a" />
+            <span id="q6a">Àcida</span></label
+          ><br />
+          <label
+            ><input type="radio" name="q6" value="b" />
+            <span id="q6b">Neutra</span></label
+          ><br />
+          <label
+            ><input type="radio" name="q6" value="c" />
+            <span id="q6c">Bàsica</span></label
+          ><br />
+        </div>
+
+        <br />
+
+        <div class="question">
+          <p id="q7text">
+            7. Un valor de pH igual a 2 indica que la substància és:
+          </p>
+
+          <label
+            ><input type="radio" name="q7" value="a" />
+            <span id="q7a">Àcida</span></label
+          ><br />
+          <label
+            ><input type="radio" name="q7" value="b" />
+            <span id="q7b">Neutra</span></label
+          ><br />
+          <label
+            ><input type="radio" name="q7" value="c" />
+            <span id="q7c">Bàsica</span></label
+          ><br />
+        </div>
+
+        <br />
+
+        <div class="question">
+          <p id="q8text">
+            8. Un valor de pH igual a 12 indica que la substància és:
+          </p>
+
+          <label
+            ><input type="radio" name="q8" value="a" />
+            <span id="q8a">Àcida</span></label
+          ><br />
+          <label
+            ><input type="radio" name="q8" value="b" />
+            <span id="q8b">Neutra</span></label
+          ><br />
+          <label
+            ><input type="radio" name="q8" value="c" />
+            <span id="q8c">Bàsica</span></label
+          ><br />
+        </div>
+
+        <br />
+
+        <div class="question">
+          <p id="q9text">9. Quina és la funció dels indicadors de pH?</p>
+
+          <label
+            ><input type="radio" name="q9" value="a" />
+            <span id="q9a">Augmentar l'acidesa de la dissolució</span></label
+          ><br />
+          <label
+            ><input type="radio" name="q9" value="b" />
+            <span id="q9b"
+              >Mostrar el pH mitjançant un canvi de color</span
+            ></label
+          ><br />
+          <label
+            ><input type="radio" name="q9" value="c" />
+            <span id="q9c">Produir ions H⁺</span></label
+          ><br />
+        </div>
+
+        <br />
+
+        <div class="question">
+          <p id="q10text">
+            10. Segons la teoria d'Arrhenius, un electròlit és una substància
+            que:
+          </p>
+
+          <label
+            ><input type="radio" name="q10" value="a" />
+            <span id="q10a">No es dissol en aigua</span></label
+          ><br />
+          <label
+            ><input type="radio" name="q10" value="b" />
+            <span id="q10b"
+              >Es dissocia en ions quan es dissol en aigua</span
+            ></label
+          ><br />
+          <label
+            ><input type="radio" name="q10" value="c" />
+            <span id="q10c">Sempre té pH 7</span></label
+          ><br />
+        </div>
+
+        <br />
+        <p id="resultat"></p>
+        <br />
+
+        <button id="res">Corregir</button>
+
+        <br /><br />
+      </div>
     </div>
+    <div id="loader"></div>
 
-    <div id="main_text">
-      <br>
-      <h2 id="historicTitle">context històric</h2>
-      <p id="historicText">
-        A finals del segle XIX, Svante August Arrhenius va formular la teoria de
-        la dissociació electrolítica, amb la qual podem explicar les
-        característiques de les substàncies àcides i bàsiques. Aquesta teoria
-        continua sent una de les bases per a l'estudi de les reaccions
-        àcid-base.
-      </p>
-       <img src="folder_images/images_teoria/Arrhenius.png">
-      <br>
-      <h2 id="acidsTitle">Substàncies àcides</h2>
-      <p id="acidsText">
-        Les substàncies àcides són aquelles que, quan es dissolen en aigua,
-        alliberen ions d'hidrogen (H⁺). Generalment tenen un valor de pH
-        inferior a 7. Un exemple d'àcid és l'àcid clorhídric (HCl).
-      </p>
-      <br>
-      <h2 id="basesTitle">Substàncies bàsiques</h2>
-      <p id="basesText">
-        Les substàncies bàsiques són aquelles que, quan es dissolen en aigua,
-        alliberen ions hidroxil (OH⁻). Generalment tenen un valor de pH superior
-        a 7. Un exemple de base és l'hidròxid de sodi (NaOH).
-      </p>
-      <br>
-      <h2 id="neutralizationTitle">Procés de neutralització</h2>
-      <p id="neutralizationText">
-        Neutralitzar una substància consisteix a fer reaccionar un àcid amb una
-        base. Durant aquesta reacció, els ions H⁺ i OH⁻ s'uneixen per formar
-        aigua. El resultat final és la formació d'una sal i aigua. <br />
-        Àcid + Base → Sal + Aigua
-      </p>
-      <br>
-      <h2 id="pHTitle">Escala de pH i pOH</h2>
-      <p id="pHText">
-        El pH és una escala que permet mesurar el grau d'acidesa d'una
-        substància. Els valors inferiors a 7 corresponen a substàncies àcides,
-        el valor 7 correspon a una substància neutra i els valors superiors a 7
-        corresponen a substàncies bàsiques. <br />
-        El pOH és una escala similar, però relacionada amb la concentració
-        d'ions hidroxil (OH⁻).
-      </p>
-      <img src="folder_images/images_teoria/escala.png">
-      <br>
-      <h2 id="indicatorsTitle">Substàncies indicadores</h2>
-      <p id="indicatorsText">
-        Els indicadors de pH són substàncies que canvien de color segons
-        l'acidesa o la basicitat d'una dissolució. S'utilitzen habitualment als
-        laboratoris per determinar de forma visual el valor aproximat de pH
-        d'una substància.
-      </p>
-      <img src="/folder_images/images_teoria/paper.png">
-      <br>
-    </div>
-
-    <div id="game">
-      <br>
-      <h2 id="quizTitle">Qüestionari:</h2>
-      <br>
-<div class="question">
-  <p id="q1text">
-    1. Una substància ____ és aquella que es dissocia en ions d'hidrogen (H⁺).
-  </p>
-
-  <label><input type="radio" name="q1" value="a" /> <span id="q1a">Àcida</span></label><br>
-  <label><input type="radio" name="q1" value="b" /> <span id="q1b">Bàsica</span></label><br>
-  <label><input type="radio" name="q1" value="c" /> <span id="q1c">Neutra</span></label><br>
-</div>
-
-<br>
-
-<div class="question">
-  <p id="q2text">
-    2. Una substància ____ és aquella que es dissocia en ions hidroxil (OH⁻).
-  </p>
-
-  <label><input type="radio" name="q2" value="a" /> <span id="q2a">Àcida</span></label><br>
-  <label><input type="radio" name="q2" value="b" /> <span id="q2b">Bàsica</span></label><br>
-  <label><input type="radio" name="q2" value="c" /> <span id="q2c">Neutra</span></label><br>
-</div>
-
-<br>
-
-<div class="question">
-  <p id="q3text">3. Quin dels següents compostos és un àcid?</p>
-
-  <label><input type="radio" name="q3" value="a" /> <span id="q3a">HCl</span></label><br>
-  <label><input type="radio" name="q3" value="b" /> <span id="q3b">NaOH</span></label><br>
-  <label><input type="radio" name="q3" value="c" /> <span id="q3c">NaCl</span></label><br>
-</div>
-
-<br>
-
-<div class="question">
-  <p id="q4text">4. Quin dels següents compostos és una base?</p>
-
-  <label><input type="radio" name="q4" value="a" /> <span id="q4a">HCl</span></label><br>
-  <label><input type="radio" name="q4" value="b" /> <span id="q4b">NaOH</span></label><br>
-  <label><input type="radio" name="q4" value="c" /> <span id="q4c">H₂O</span></label><br>
-</div>
-
-<br>
-
-<div class="question">
-  <p id="q5text">5. Què es forma durant una reacció de neutralització?</p>
-
-  <label><input type="radio" name="q5" value="a" /> <span id="q5a">Només aigua</span></label><br>
-  <label><input type="radio" name="q5" value="b" /> <span id="q5b">Només una sal</span></label><br>
-  <label><input type="radio" name="q5" value="c" /> <span id="q5c">Una sal i aigua</span></label><br>
-</div>
-
-<br>
-
-<div class="question">
-  <p id="q6text">6. Un valor de pH igual a 7 indica que la substància és:</p>
-
-  <label><input type="radio" name="q6" value="a" /> <span id="q6a">Àcida</span></label><br>
-  <label><input type="radio" name="q6" value="b" /> <span id="q6b">Neutra</span></label><br>
-  <label><input type="radio" name="q6" value="c" /> <span id="q6c">Bàsica</span></label><br>
-</div>
-
-<br>
-
-<div class="question">
-  <p id="q7text">7. Un valor de pH igual a 2 indica que la substància és:</p>
-
-  <label><input type="radio" name="q7" value="a" /> <span id="q7a">Àcida</span></label><br>
-  <label><input type="radio" name="q7" value="b" /> <span id="q7b">Neutra</span></label><br>
-  <label><input type="radio" name="q7" value="c" /> <span id="q7c">Bàsica</span></label><br>
-</div>
-
-<br>
-
-<div class="question">
-  <p id="q8text">8. Un valor de pH igual a 12 indica que la substància és:</p>
-
-  <label><input type="radio" name="q8" value="a" /> <span id="q8a">Àcida</span></label><br>
-  <label><input type="radio" name="q8" value="b" /> <span id="q8b">Neutra</span></label><br>
-  <label><input type="radio" name="q8" value="c" /> <span id="q8c">Bàsica</span></label><br>
-</div>
-
-<br>
-
-<div class="question">
-  <p id="q9text">9. Quina és la funció dels indicadors de pH?</p>
-
-  <label><input type="radio" name="q9" value="a" /> <span id="q9a">Augmentar l'acidesa de la dissolució</span></label><br>
-  <label><input type="radio" name="q9" value="b" /> <span id="q9b">Mostrar el pH mitjançant un canvi de color</span></label><br>
-  <label><input type="radio" name="q9" value="c" /> <span id="q9c">Produir ions H⁺</span></label><br>
-</div>
-
-<br>
-
-<div class="question">
-  <p id="q10text">10. Segons la teoria d'Arrhenius, un electròlit és una substància que:</p>
-
-  <label><input type="radio" name="q10" value="a" /> <span id="q10a">No es dissol en aigua</span></label><br>
-  <label><input type="radio" name="q10" value="b" /> <span id="q10b">Es dissocia en ions quan es dissol en aigua</span></label><br>
-  <label><input type="radio" name="q10" value="c" /> <span id="q10c">Sempre té pH 7</span></label><br>
-</div>
-
-<br>
-<p id="resultat"></p>
-<br>
-
-<button id="res">Corregir</button>
-
-<br><br>
-
-    </div>
-  </div>
-   <div id="loader"></div>
-
-<script src="folders_js/corregir_resultat.js"> </script>
-<script src="folders_js/accessibility.js"></script>
-<script src="folders_js/loader.js"></script>
+    <script src="folders_js/corregir_resultat.js"></script>
+    <script src="folders_js/accessibility.js"></script>
+    <script src="folders_js/loader.js"></script>
   </body>
-
 </html>
