@@ -1,37 +1,33 @@
 :root {
-   --bg-1: #070a1f;
-   --bg-2: #050816;
-   --bg-3: #0b1b3a;
-   --bg-gradient: linear-gradient(120deg,
-         var(--bg-1),
-         var(--bg-2),
-         var(--bg-3));
+   --bg-1: #040b18;               
+   --bg-2: #263347;               
+   --bg-3: #0d1527;              
+   --bg-gradient: linear-gradient(120deg, var(--bg-1), var(--bg-2), var(--bg-3));
    --bg-size: 300% 300%;
-   --glass: rgba(20, 30, 60, 0.45);
-   --glass-strong: rgba(18, 25, 50, 0.75);
-   --surface: rgba(10, 14, 30, 0.92);
-   --surface-soft: rgba(18, 25, 55, 0.6);
-   --surface-alt: rgba(5, 8, 20, 0.95);
-   --text: #f8fafc;
-   --muted: #a7b6d6;
-   --primary: #3aa9ff;
-   --primary-dark: #1d6fff;
-   --primary-hover-gradient: linear-gradient(135deg,
-         var(--primary),
-         var(--primary-dark));
-   --accent: #cb7914;
-   --accent-light: #aa5f19;
-   --accent-gradient: linear-gradient(135deg,
-         var(--accent-light),
-         var(--accent));
-   --border: rgba(148, 163, 184, 0.18);
-   --border-soft: rgba(148, 163, 184, 0.08);
-   --shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
-   --shadow-soft: 0 6px 18px rgba(0, 0, 0, 0.25);
-   --shadow-hover: 0 18px 50px rgba(0, 0, 0, 0.55);
-   --shadow-accent: 0 10px 25px rgba(250, 204, 21, 0.18);
-   --blur: blur(14px);
-   --blur-strong: blur(18px);
+   --glass: #0f172a;             
+   --glass-strong: #1e293b;       
+   --surface: #1e293b;             
+   --surface-soft: #131f36;      
+   --surface-alt: #1e293b;       
+   --text: #ffffff;                
+   --muted: #ffffff;              
+   --primary: #38bdf8;             
+   --primary-dark: #7dd3fc;       
+   --primary-bg-cube: rgba(56, 189, 248, 0.12);
+   --primary-hover-gradient: linear-gradient(135deg, #0ea5e9, #38bdf8);
+   --accent: #803e00;              
+   --accent-light: #d79a18;        
+   --accent-gradient: linear-gradient(135deg, var(--accent-light), var(--accent));         
+   --border: rgba(56, 189, 248, 0.4);    
+   --border-soft: rgba(255, 255, 255, 0.15);
+   --shadow: 0 15px 30px -5px rgba(56, 189, 248, 0.2);
+   --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.5);
+   --shadow-hover: 0 20px 40px -5px rgba(56, 189, 248, 0.35);
+   --shadow-accent: 0 10px 25px rgba(251, 190, 36, 0.4);
+   --blur: blur(0px);            
    --radius: 16px;
    --radius-sm: 12px;
+   --main-img-size: 200px;
+   --example-img-size: 130px;
+   --row-min-height: 350px;
 }

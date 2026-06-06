@@ -234,3 +234,20 @@ slider.addEventListener("input", function () {
   }
 
 });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const wrapper = document.querySelector('.sidebar-wrapper');
+    const settingsButton = document.getElementById('settingsButton');
+
+    settingsButton.addEventListener('click', () => {
+      // Alterna la clase en el contenedor global
+      wrapper.classList.toggle('panel-open');
+    });
+
+    // Cierra el menú lateral si haces clic en el contenido principal de la página
+    document.addEventListener('click', (event) => {
+      if (!wrapper.contains(event.target)) {
+        wrapper.classList.remove('panel-open');
+      }
+    });
+  });

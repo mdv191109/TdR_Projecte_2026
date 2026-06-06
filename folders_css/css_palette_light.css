@@ -2,12 +2,9 @@
    --bg-1: #eaf6ff;
    --bg-2: #9fd8ff;
    --bg-3: #349edf;
-   --bg-gradient: linear-gradient(120deg,
-         var(--bg-1),
-         var(--bg-2),
-         var(--bg-3));
+   --bg-gradient: linear-gradient(120deg, var(--bg-1), var(--bg-2), var(--bg-3));
    --bg-size: 300% 300%;
-   --glass: rgba(255, 255, 255, 0.55);
+   --glass: rgba(255, 255, 255, 0.596);
    --glass-strong: rgba(255, 255, 255, 0.75);
    --surface: rgba(255, 255, 255, 0.9);
    --surface-soft: rgba(255, 255, 255, 0.65);
@@ -15,15 +12,12 @@
    --text: #0f172a;
    --muted: #475569;
    --primary: #38bdf8;
-   --primary-dark: #0ea5e9;
-   --primary-hover-gradient: linear-gradient(135deg,
-         var(--primary),
-         var(--primary-dark));
+   --primary-dark: #0b6ad6;
+   --primary-bg-cube: #2f90ff1d;
+   --primary-hover-gradient: linear-gradient(135deg, var(--primary), var(--primary-dark));
    --accent: #f7d634;
    --accent-light: #fff173;
-   --accent-gradient: linear-gradient(135deg,
-         var(--accent-light),
-         var(--accent));
+   --accent-gradient: linear-gradient(135deg, var(--accent-light), var(--accent));
    --border: rgba(59, 130, 246, 0.18);
    --border-soft: rgba(15, 23, 42, 0.08);
    --shadow: 0 12px 35px rgba(2, 132, 199, 0.18);
@@ -31,7 +25,9 @@
    --shadow-hover: 0 18px 45px rgba(2, 132, 199, 0.22);
    --shadow-accent: 0 10px 25px rgba(253, 224, 71, 0.25);
    --blur: blur(12px);
-   --blur-strong: blur(14px);
-   --radius: 16px;
+    --radius: 16px;
    --radius-sm: 12px;
+   --main-img-size: 200px;
+   --example-img-size: 130px;
+   --row-min-height: 350px;
 }

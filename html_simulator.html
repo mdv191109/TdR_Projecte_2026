@@ -5,29 +5,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="folders_images/images_icon/favicon.png" />
-  <link id="paletteCSS" rel="stylesheet" href="folders_css/css_palette_light.css" />
 
-  <link rel="stylesheet" href="folders_css/css_base_simulator.css" />
 
+ <link id="paletteCSS" rel="stylesheet" href="folders_css/css_palette_light.css" />
+ <link rel="stylesheet" href="folders_css/css_base_simulator.css" />
+ 
   <title>simulator_page</title>
 </head>
 
 <body>
-  <header>
-    <div id="settings">
-      <button id="languageButton">English</button>
+  <div class="sidebar-wrapper">
+  <button id="settingsButton" aria-label="Configuració">⚙</button>
+  <div id="settings">
+    <button id="languageButton">English</button>
 
-      <select id="themeSelector">
-        <option value="default">Tema clar</option>
-        <option value="dark">Tema fosc</option>
-        <option value="highContrast">Alt contrast</option>
-      </select>
+    <select id="themeSelector">
+      <option value="default">Tema clar</option>
+      <option value="dark">Tema fosc</option>
+      <option value="highContrast">Alt contrast</option>
+    </select>
 
-      <label for="fontSlider">Mida del text:</label>
+    <label for="fontSlider">Mida del text:</label>
+    <input type="range" id="fontSlider" min="14" max="30" value="18" />
+  </div>
+</div>
 
-      <input type="range" id="fontSlider" min="14" max="30" value="18" />
-    </div>
-  </header>
 
   <main>
     <div id="header">
@@ -94,7 +96,7 @@
 
   <div id="game">
     <br>
-    <h2 id="quizTitle">Qüestionari:</h2>
+    <h3 id="quizTitle">Qüestionari:</h3>
     <br>
     <div class="question">
       <p id="q1text">
