@@ -1,15 +1,14 @@
-
-
 @font-face {
   font-family: bold_font;
-  src: url(../folders_fonts/black.otf);
-}@font-face {
-  font-family:medium_font;
-  src: url(../folders_fonts/medium.otf);
-}@font-face {
-   font-family:thin_font;
-  src: url(../folders_fonts/thin.otf);
-}
+  src: url(../folders_fonts/black.otf);}
+
+@font-face {
+  font-family: medium_font;
+  src: url(../folders_fonts/medium.otf);}
+
+@font-face {
+  font-family: thin_font;
+  src: url(../folders_fonts/thin.otf);}
 
 * {
   margin: 0;
@@ -25,39 +24,28 @@
   font-size: inherit;
 }
 
-/* =========================
-   BODY (ANIMATED GRADIENT)
-========================= */
-
 body {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-
   padding: 40px 20px;
-
   display: grid;
   gap: 16px;
-
   color: var(--text);
-
   background: var(--bg-gradient);
   background-size: var(--bg-size);
-
   animation: bgFlow 12s ease infinite;
   align-items: center;
-
 }
 
 @keyframes bgFlow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;}
+  50% {
+    background-position: 100% 50%;}
+  100% {
+    background-position: 0% 50%;}
 }
-
-/* =========================
-   TYPOGRAPHY
-========================= */
 
 h1 {
   align-items: center;
@@ -70,7 +58,7 @@ h1 {
 }
 
 h2 {
-    align-items: center;
+  align-items: center;
   justify-content: center;
   text-align: center;
   font-size: 22px;
@@ -85,70 +73,45 @@ p {
   font-weight: bold;
 }
 
-/* =========================
-   CONTAINERS
-========================= */
-
 div {
-    align-items: center;
+  align-items: center;
   justify-content: center;
   text-align: center;
   background: var(--glass);
   border: 1px solid var(--border);
-
   border-radius: var(--radius);
   box-shadow: var(--shadow-soft);
-
   backdrop-filter: var(--blur);
-
   padding: 18px;
-
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-margin-bottom: 24px;
+  margin-bottom: 24px;
 }
-
 
 div:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-hover);
 }
 
-/* =========================
-   SETTINGS BAR
-========================= */
-
 #settings {
   display: flex;
   gap: 12px;
   align-items: center;
   flex-wrap: wrap;
-
   background: var(--glass-strong);
   backdrop-filter: var(--blur-strong);
-
   border: 1px solid var(--border);
-
   border-radius: var(--radius);
-
   box-shadow: var(--shadow);
 }
-
-/* =========================
-   BUTTONS
-========================= */
 
 button,
 select {
   padding: 8px 14px;
-
   border-radius: var(--radius-sm);
   border: 1px solid var(--border);
-
   background: var(--surface-alt);
   color: var(--text);
-
   cursor: pointer;
-
   transition: all 0.2s ease;
 }
 
@@ -159,26 +122,16 @@ select:hover {
   border-color: var(--primary);
 }
 
-/* =========================
-   SLIDER
-========================= */
-
 input[type="range"] {
   width: 160px;
   accent-color: var(--primary);
 }
 
-/* =========================
-   QUESTIONS
-========================= */
-
 .question {
   padding: 14px;
   border-radius: var(--radius-sm);
-
   background: var(--surface-soft);
   border: 1px solid var(--border);
-
   backdrop-filter: var(--blur);
 }
 
@@ -187,21 +140,13 @@ input[type="range"] {
   transition: 0.2s ease;
 }
 
-/* =========================
-   IMAGES
-========================= */
-
 img {
   width: 100%;
   max-width: 320px;
-
   margin-top: 10px;
-
   border-radius: var(--radius-sm);
   border: 1px solid var(--border);
-
   box-shadow: var(--shadow-soft);
-
   transition: transform 0.3s ease;
 }
 
@@ -209,50 +154,33 @@ img:hover {
   transform: scale(1.02) rotate(0.3deg);
 }
 
-/* =========================
-   RESULT BOX
-========================= */
-
 #resultat {
   font-size: 18px;
   font-weight: 600;
-
   padding: 12px;
   border-radius: var(--radius-sm);
-
   background: var(--accent-gradient);
   color: var(--text);
-
   box-shadow: var(--shadow-accent);
-
   animation: popIn 0.4s ease;
 }
 
 @keyframes popIn {
   from {
     opacity: 0;
-    transform: scale(0.95);
-  }
+    transform: scale(0.95);}
   to {
     opacity: 1;
-    transform: scale(1);
-  }
+    transform: scale(1);}
 }
-
-/* =========================
-   BUTTON PRIMARY
-========================= */
 
 #res {
   padding: 10px 16px;
   border-radius: var(--radius-sm);
-
   background: var(--primary-hover-gradient);
   color: white;
-
   border: none;
   cursor: pointer;
-
   transition: all 0.2s ease;
 }
 
@@ -265,8 +193,6 @@ img:hover {
   transform: scale(0.98);
 }
 
-
-
 .question label {
   font-size: inherit;
   line-height: 1.4;
@@ -276,7 +202,6 @@ img:hover {
   transform: scale(1);
   margin-right: 6px;
 }
-
 
 #main_text {
   --font-size: 18px;
@@ -288,20 +213,14 @@ img:hover {
   font-size: inherit;
 }
 
-
-
 #loader {
   position: fixed;
   inset: 0;
   z-index: 9999;
-
   background: linear-gradient(120deg, #1a72d7, #003297);
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   opacity: 1;
   transition: opacity 0.5s ease;
 }
-
