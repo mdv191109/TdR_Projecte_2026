@@ -154,7 +154,8 @@ translations.ca.results = {
   medium: "Has obtingut",
   mediumEnd: "Repassa alguns conceptes.",
   low: "Has obtingut",
-  lowEnd: "Et recomano tornar a llegir la teoria."
+  lowEnd: "Et recomano tornar a llegir la teoria.",
+  answer: "Sisplau, respon totes les preguntes abans de corregir el qüestionari."
 };
 
 translations.en.results = {
@@ -163,7 +164,8 @@ translations.en.results = {
   medium: "You scored",
   mediumEnd: "Review some concepts.",
   low: "You scored",
-  lowEnd: "I recommend reading the theory again."
+  lowEnd: "I recommend reading the theory again.",
+  answer: "Please answer all questions before submitting the quiz."
 };
 
 let currentLanguage = "ca";

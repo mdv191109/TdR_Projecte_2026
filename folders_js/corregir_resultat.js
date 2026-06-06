@@ -12,6 +12,7 @@ const respostesCorrectes = {
 };
 
 function corregirQuiz() {
+    let answer = window.translations[window.currentLanguage].results;
   let encerts = 0;
 
   for (let pregunta in respostesCorrectes) {
@@ -20,8 +21,11 @@ function corregirQuiz() {
     );
 
     if (resposta) {
-      if (resposta.value == respostesCorrectes[pregunta]) {
+     if (resposta.value == respostesCorrectes[pregunta]) {
         encerts++;
+    } else  (!resposta) {
+                document.getElementById("resultat").textContent = answer;
+
       }
     }
   }
