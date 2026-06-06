@@ -23,10 +23,7 @@ function corregirQuiz() {
     if (resposta) {
      if (resposta.value == respostesCorrectes[pregunta]) {
         encerts++;
-    } else  (!resposta) {
-                document.getElementById("resultat").textContent = answer;
-
-      }
+    }
     }
   }
 
