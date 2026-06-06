@@ -4,7 +4,7 @@
    --bg-3: #0d1527;              
    --bg-gradient: linear-gradient(120deg, var(--bg-1), var(--bg-2), var(--bg-3));
    --bg-size: 300% 300%;
-   --glass: #0f172a;             
+   --glass: #0f172acd;             
    --glass-strong: #1e293b;       
    --surface: #1e293b;             
    --surface-soft: #131f36;      
