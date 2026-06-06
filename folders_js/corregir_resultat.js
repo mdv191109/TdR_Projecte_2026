@@ -12,38 +12,36 @@ const respostesCorrectes = {
 };
 
 function corregirQuiz() {
-  let puntuacio = 0;
+  let encerts = 0;
 
   for (let pregunta in respostesCorrectes) {
-    const respostaSeleccionada = document.querySelector(
-      `input[name="${pregunta}"]:checked`
+    let resposta = document.querySelector(
+      'input[name="' + pregunta + '"]:checked'
     );
 
-    if (
-      respostaSeleccionada &&
-      respostaSeleccionada.value === respostesCorrectes[pregunta]
-    ) {
-      puntuacio++;
+    if (resposta) {
+      if (resposta.value == respostesCorrectes[pregunta]) {
+        encerts++;
+      }
     }
   }
 
-  const texts = window.translations[window.currentLanguage].results;
-
+  let texts = window.translations[window.currentLanguage].results;
   let missatge = "";
 
-  if (puntuacio === 10) {
+  if (encerts == 10) {
     missatge = texts.perfect;
-  } else if (puntuacio >= 7) {
-    missatge = `${texts.good} ${puntuacio}/10.`;
-  } else if (puntuacio >= 5) {
-    missatge = `${texts.medium} ${puntuacio}/10. ${texts.mediumEnd}`;
+  } else if (encerts >= 7) {
+    missatge = texts.good + " " + encerts + "/10.";
+  } else if (encerts >= 5) {
+    missatge =
+      texts.medium + " " + encerts + "/10. " + texts.mediumEnd;
   } else {
-    missatge = `${texts.low} ${puntuacio}/10. ${texts.lowEnd}`;
+    missatge =
+      texts.low + " " + encerts + "/10. " + texts.lowEnd;
   }
 
   document.getElementById("resultat").textContent = missatge;
 }
 
-document
-  .getElementById("res")
-  .addEventListener("click", corregirQuiz);
+document.getElementById("res").addEventListener("click", corregirQuiz);
