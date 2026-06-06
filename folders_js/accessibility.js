@@ -70,7 +70,7 @@ const translations = {
     q10a: "No es dissol en aigua",
     q10b: "Es dissocia en ions quan es dissol en aigua",
     q10c: "Sempre té pH 7",
-     res: "corregir"
+    res: "corregir"
   },
 
   en: {
@@ -144,7 +144,7 @@ const translations = {
     q10a: "Does not dissolve in water",
     q10b: "Dissociates into ions when dissolved in water",
     q10c: "Always has pH 7",
-      res: "correct"
+    res: "correct"
   }
 };
 
@@ -155,7 +155,6 @@ translations.ca.results = {
   mediumEnd: "Repassa alguns conceptes.",
   low: "Has obtingut",
   lowEnd: "Et recomano tornar a llegir la teoria."
-
 };
 
 translations.en.results = {
@@ -174,25 +173,29 @@ window.currentLanguage = currentLanguage;
 
 document.getElementById("languageButton").addEventListener("click", function () {
 
-  currentLanguage = currentLanguage === "ca" ? "en" : "ca";
+  if (currentLanguage == "ca") {
+    currentLanguage = "en";
+  } else {
+    currentLanguage = "ca";
+  }
   window.currentLanguage = currentLanguage;
 
-  const texts = translations[currentLanguage];
+  let texts = translations[currentLanguage];
 
   for (const id in texts) {
-    const element = document.getElementById(id);
+    let element = document.getElementById(id);
 
     if (element) {
       element.textContent = texts[id];
     }
   }
 
-  this.textContent =
-    currentLanguage === "ca"
-      ? "English"
-      : "Català";
+  if (currentLanguage == "ca") {
+    this.textContent = "English";
+  } else {
+    this.textContent = "Català";
+  }
 
-  // Update quiz result if one is already displayed
   if (
     document.getElementById("resultat").textContent !== ""
   ) {
@@ -200,34 +203,32 @@ document.getElementById("languageButton").addEventListener("click", function () 
   }
 });
 
-//theme 
-
-const palette = document.getElementById("paletteCSS");
+let palette = document.getElementById("paletteCSS");
 
 document.getElementById("themeSelector").addEventListener("change", function () {
 
-  if (this.value === "default") {
+  if (this.value == "default") {
     palette.href = "folders_css/css_palette_light.css";
   }
 
-  if (this.value === "dark") {
+  if (this.value == "dark") {
     palette.href = "folders_css/css_palette_dark.css";
   }
 
-  if (this.value === "highContrast") {
+  if (this.value == "highContrast") {
     palette.href = "folders_css/css_palette_highcontrast.css";
   }
 });
-
-
 
 const slider = document.getElementById("fontSlider");
 const main = document.getElementById("main_text");
 
 slider.addEventListener("input", function () {
 
-document.querySelectorAll('p, span, h2').forEach(el => {
-    el.style.fontSize = this.value + 'px';
-});
+  let elements = document.querySelectorAll("p, span, h2");
+
+  for (let i = 0; i < elements.length; i++) {
+    elements[i].style.fontSize = this.value + "px";
+  }
 
 });
