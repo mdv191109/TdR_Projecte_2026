@@ -1,94 +1,37 @@
 :root {
-  /* =========================
-     BACKGROUND SYSTEM
-  ========================= */
-
-  --bg-1: #eaf6ff;
-  --bg-2: #9fd8ff;
-  --bg-3: #349edf;
-
-  --bg-gradient: linear-gradient(
-    120deg,
-    var(--bg-1),
-    var(--bg-2),
-    var(--bg-3)
-  );
-
-  /* animated background */
-  --bg-size: 300% 300%;
-
-  /* =========================
-     SURFACES / GLASS
-  ========================= */
-
-  --glass: rgba(255, 255, 255, 0.55);
-  --glass-strong: rgba(255, 255, 255, 0.75);
-
-  --surface: rgba(255, 255, 255, 0.9);
-  --surface-soft: rgba(255, 255, 255, 0.65);
-  --surface-alt: #f1f5f9;
-
-  /* =========================
-     TEXT
-  ========================= */
-
-  --text: #0f172a;
-  --muted: #475569;
-
-  /* =========================
-     PRIMARY BLUE SYSTEM
-  ========================= */
-
-  --primary: #38bdf8;
-  --primary-dark: #0ea5e9;
-
-  --primary-hover-gradient: linear-gradient(
-    135deg,
-    var(--primary),
-    var(--primary-dark)
-  );
-
-  /* =========================
-     ACCENT YELLOW SYSTEM
-  ========================= */
-
-  --accent: #f7d634;
-  --accent-light: #fff173;
-
-  --accent-gradient: linear-gradient(
-    135deg,
-    var(--accent-light),
-    var(--accent)
-  );
-
-  /* =========================
-     BORDERS
-  ========================= */
-
-  --border: rgba(59, 130, 246, 0.18);
-  --border-soft: rgba(15, 23, 42, 0.08);
-
-  /* =========================
-     SHADOWS
-  ========================= */
-
-  --shadow: 0 12px 35px rgba(2, 132, 199, 0.18);
-  --shadow-soft: 0 4px 12px rgba(15, 23, 42, 0.06);
-  --shadow-hover: 0 18px 45px rgba(2, 132, 199, 0.22);
-
-  --shadow-accent: 0 10px 25px rgba(253, 224, 71, 0.25);
-
-  /* =========================
-     EFFECTS
-  ========================= */
-
-  --blur: blur(12px);
-  --blur-strong: blur(14px);
-
-  /* =========================
-     RADIUS / SPACING
-  ========================= */
-
-  --radius: 16px;
-  --radius-sm: 12px;
+   --bg-1: #eaf6ff;
+   --bg-2: #9fd8ff;
+   --bg-3: #349edf;
+   --bg-gradient: linear-gradient(120deg,
+         var(--bg-1),
+         var(--bg-2),
+         var(--bg-3));
+   --bg-size: 300% 300%;
+   --glass: rgba(255, 255, 255, 0.55);
+   --glass-strong: rgba(255, 255, 255, 0.75);
+   --surface: rgba(255, 255, 255, 0.9);
+   --surface-soft: rgba(255, 255, 255, 0.65);
+   --surface-alt: #f1f5f9;
+   --text: #0f172a;
+   --muted: #475569;
+   --primary: #38bdf8;
+   --primary-dark: #0ea5e9;
+   --primary-hover-gradient: linear-gradient(135deg,
+         var(--primary),
+         var(--primary-dark));
+   --accent: #f7d634;
+   --accent-light: #fff173;
+   --accent-gradient: linear-gradient(135deg,
+         var(--accent-light),
+         var(--accent));
+   --border: rgba(59, 130, 246, 0.18);
+   --border-soft: rgba(15, 23, 42, 0.08);
+   --shadow: 0 12px 35px rgba(2, 132, 199, 0.18);
+   --shadow-soft: 0 4px 12px rgba(15, 23, 42, 0.06);
+   --shadow-hover: 0 18px 45px rgba(2, 132, 199, 0.22);
+   --shadow-accent: 0 10px 25px rgba(253, 224, 71, 0.25);
+   --blur: blur(12px);
+   --blur-strong: blur(14px);
+   --radius: 16px;
+   --radius-sm: 12px;
 }
